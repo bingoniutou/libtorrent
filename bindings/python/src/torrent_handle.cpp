@@ -496,7 +496,7 @@ void bind_torrent_handle()
         .def("save_resume_data", _(&torrent_handle::save_resume_data), arg("flags") = 0)
         .def("need_save_resume_data", _(&torrent_handle::need_save_resume_data))
         .def("force_reannounce", _(force_reannounce0)
-            , (arg("seconds") = 0, arg("tracker_idx") = -1, arg("flags") = 0))
+            , (arg("seconds") = 0, arg("tracker_idx") = -1, arg("flags") = 1))
 #ifndef TORRENT_DISABLE_DHT
         .def("force_dht_announce", _(&torrent_handle::force_dht_announce))
 #endif
